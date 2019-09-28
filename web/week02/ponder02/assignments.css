@@ -1,0 +1,34 @@
+* {
+    text-align: center
+}
+
+body {
+    background: #91a5a1; /*Dark teal color*/
+}
+
+h1, h3 {
+    font-family: 'High Tower Text';
+}
+
+div {
+    border: solid 7px #00303f; /*Dark blue*/
+    border-radius: 1px;
+    background: #ceddd6; /*Lighter shade of teal*/
+    margin: 10px 60px 10px 60px;
+    padding: 10px;
+    color: #001921; /*Darker blue of the dark blue*/
+}
+ul{
+    display: table;
+    margin: auto;
+    padding: 2px;
+    border: solid 2px #dcae1d; /*Yellow*/
+    border-radius: 3px;
+    background: white;
+    font-family: 'High Tower Text';
+    font-size: 17px;
+    list-style: none;
+}
+li{
+    margin: 10px;
+}

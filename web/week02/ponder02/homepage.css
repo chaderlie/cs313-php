@@ -91,3 +91,7 @@ tr {
    float: right; 
    border-radius: 6px;
 }
+
+#profile_photo {
+    float:left;
+}
