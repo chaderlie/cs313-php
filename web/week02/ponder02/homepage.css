@@ -95,3 +95,6 @@ tr {
 #profile_photo {
     float:left;
 }
+ul {
+  list-style-type:none;
+}
