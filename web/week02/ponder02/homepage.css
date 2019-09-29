@@ -83,11 +83,11 @@ header {
     font-family:'Times New Roman';
 }
 
-unselected_row {
+even_row {
   background-color: #8FC1E3;
 }
 
-selected_row {
+odd_row {
     background-color: #d6e9f5;
   }
 
