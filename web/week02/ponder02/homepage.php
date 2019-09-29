@@ -51,22 +51,22 @@
                 <th>Description</th>
                 <th>Time</th>
             </tr>
-            <tr>
+            <tr class="odd_row">
                 <td>MATH 330</td>
                 <td>Engineering Statistics</td>
                 <td>M/W/F 10:15 - 11:15</td>
             </tr>
-            <tr>
+            <tr class="even_row">
                 <td>CIT 225</td>
                 <td>Database Design and Development</td>
                 <td>M/W/F 12:45 - 1:45</td>
             </tr>
-            <tr>
+            <tr class="odd_row">
                 <td>CS 470</td>
                 <td>Computer Security</td>
                 <td>T/Th 12:45 - 2:15</td>
             </tr>
-            <tr>
+            <tr class="even_row">
                 <td>Cs 313</td>
                 <td>Web Engineering II</td>
                 <td>T/Th 2:30 - 4:00</td>
