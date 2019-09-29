@@ -15,7 +15,7 @@
     <div class="topnav">
         <ul >
             <li>
-                <a class="blue" href="assignments.html">Assignments</a>
+                <a class="blue" href="assignments.php">Assignments</a>
                 <a class="blue" href="#schedule">My Schedule</a>
                 <a class="blue" href="https://www.linkedin.com/in/claire-haderlie-hocker-6329a2117/">My LinkedIn</a>
             </li>
@@ -77,7 +77,7 @@
         <br>
     </div>
     <footer class="footer">
-        <a class="blue button" href="assignments.html">Assignments</a>
+        <a class="blue button" href="assignments.php">Assignments</a>
     </footer>
 </body>
 </html>
