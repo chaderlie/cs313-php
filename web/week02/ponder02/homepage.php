@@ -36,7 +36,7 @@
             numbers are only for internal use, but just to let you know, the work is moving along! 
         </p>
         <p>This semester at school, my husband and I are both taking 12 credits here,
-            and I'm a TA for CS 165. I love to read books, dance, spend time with my hubby, play games, be outside, run,
+            and I'm a TA for CS 165. I am on the collegiate clogging team. I love to read books, dance, spend time with my hubby, play games, be outside, run,
             tap dance, and eat ice cream.
         </p>
         <p>Mouse over my profile photo to see my amazing husband!</p>
@@ -67,9 +67,14 @@
                 <td>T/Th 12:45 - 2:15</td>
             </tr>
             <tr class="even_row">
-                <td>Cs 313</td>
+                <td>CS 313</td>
                 <td>Web Engineering II</td>
                 <td>T/Th 2:30 - 4:00</td>
+            </tr>
+            <tr class="odd_row">
+                <td>DANCE 488R</td>
+                <td>Collegiate Dancers</td>
+                <td>T/Th 4:30 - 5:30</td>
             </tr>
         </table>
         <br>
