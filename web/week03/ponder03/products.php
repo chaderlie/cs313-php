@@ -94,5 +94,5 @@ foreach($product_array as $product) {
     echo "</tr>";
 }
 
-echo ($_SESSION['products']);
+echo ($_SESSION['products'][0]);
 ?>
