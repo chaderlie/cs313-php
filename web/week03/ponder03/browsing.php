@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+<script type="text/javascript">
+    </script>
 <head>
     <meta charset="UTF-8">
     <title>Sol Syst LCC</title>
@@ -8,7 +9,7 @@
 </head>
 <body>
     <div>
-        <form action="/process_form.php">
+        <form action="/process_form.php"  method="post">
             <table>
                 <tr>
                     <th>Planet</th>
@@ -22,7 +23,7 @@
          include 'products.php';
         ?>
             </table>
-            <input type="submit">
+            <input type="Submit" value="Add to Cart">
         </form>
 
         <br />
