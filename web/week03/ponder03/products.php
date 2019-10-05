@@ -86,7 +86,6 @@ array_push($product_array, $jupiter);
 array_push($product_array, $saturn);
 array_push($product_array, $uranus);
 
-$_SESSION["products"] = $product_array;
 
 foreach($product_array as $product) {
     echo "<tr> <td>" . $product->planet . "</td>";
@@ -98,7 +97,4 @@ foreach($product_array as $product) {
 
     echo "</tr>";
 }
-
-$_SESSION["products"] = $product_array;
-
 ?>

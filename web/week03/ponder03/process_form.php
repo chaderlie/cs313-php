@@ -1,5 +1,8 @@
 
 <!DOCTYPE html>
+<?php
+require 'start_session.php';
+?>
 <html>
 <script type="text/javascript">
     </script>
@@ -12,7 +15,8 @@
 <?php
 
 foreach($_POST["products"] as $product) {
-    echo "<p>" . $product . "</p>";
+   array_push($_SESSION['products'], $product);
+   echo $product;
 }
 
 ?>
