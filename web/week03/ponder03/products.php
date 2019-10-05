@@ -7,7 +7,7 @@ class Product {
     public $description;
     public $price;
     public $inhabitants;
-    public $is_in_cart;
+    public $checkbox_html;
 }
 
 $product_array = array();
@@ -18,6 +18,8 @@ $mercury->radius = "1,516 mi";
 $mercury->description = "Description";
 $mercury->inhabitants = "Inhabitants";
 $mercury->price = "Price"; 
+$mercury->checkbox_html = "<input type='checkbox' name='mercury' value='mercury'>";
+
 
 $venus = new Product;
 $venus->planet = "Venus";
@@ -25,7 +27,7 @@ $venus->radius = "3,760.4 mi";
 $venus->description = "Description";
 $venus->inhabitants = "Inhabitants";
 $venus->price = "Price"; 
-$venus->image_html = "<input type='checkbox' name='venus' value='venus'> Venus";
+$venus->checkbox_html = "<input type='checkbox' name='venus' value='venus'>";
 
 $earth = new Product;
 $earth->planet = "Earth";
@@ -33,7 +35,7 @@ $earth->radius = "3,958.8 mi";
 $earth->description = "Description";
 $earth->inhabitants = "Inhabitants";
 $earth->price = "Price"; 
-$earth->image_html = "<input type='checkbox' name='earth' value='earth'> Earth";
+$earth->checkbox_html = "<input type='checkbox' name='earth' value='earth'>";
 
 $mars = new Product;
 $mars->planet = "Mars";
@@ -41,7 +43,7 @@ $mars->radius = "2,106.1 mi";
 $mars->description = "Description";
 $mars->inhabitants = "Inhabitants";
 $mars->price = "Price"; 
-$mars->image_html = "<input type='checkbox' name='mars' value='mars'> Mars";
+$mars->checkbox_html = "<input type='checkbox' name='mars' value='mars'>";
 
 $jupiter = new Product;
 $jupiter->planet = "Jupiter";
@@ -49,7 +51,7 @@ $jupiter->radius = "43,441 mi";
 $jupiter->description = "Description";
 $jupiter->inhabitants = "Inhabitants";
 $jupiter->price = "Price"; 
-$jupiter->image_html = "<input type='checkbox' name='jupiter' value='jupiter'> Jupiter";
+$jupiter->checkbox_html = "<input type='checkbox' name='jupiter' value='jupiter'>";
 
 $saturn = new Product;
 $saturn->planet = "Saturn";
@@ -57,7 +59,7 @@ $saturn->radius = "36,184 mi";
 $saturn->description = "Description";
 $saturn->inhabitants = "Inhabitants";
 $saturn->price = "Price"; 
-$saturn->image_html = "<input type='checkbox' name='saturn' value='saturn'> Saturn";
+$saturn->checkbox_html = "<input type='checkbox' name='saturn' value='saturn'>";
 
 $uranus = new Product;
 $uranus->planet = "Uranus";
@@ -65,7 +67,7 @@ $uranus->radius = "15,759 mi";
 $uranus->description = "Description";
 $uranus->inhabitants = "Inhabitants";
 $uranus->price = "Price"; 
-$uranus->image_html = "<input type='checkbox' name='uranus' value='uranus'> Uranus";
+$uranus->checkbox_html = "<input type='checkbox' name='uranus' value='uranus'>";
 
 $neptune = new Product;
 $neptune->planet = "Neptune";
@@ -73,7 +75,7 @@ $neptune->radius = "15,299 mi";
 $neptune->description = "Description";
 $neptune->inhabitants = "Inhabitants";
 $neptune->price = "Price"; 
-$neptune->image_html = "<input type='checkbox' name='neptune' value='neptune'> Neptune";
+$neptune->checkbox_html = "<input type='checkbox' name='neptune' value='neptune'>";
 
 array_push($product_array, $mercury);
 array_push($product_array, $venus);
@@ -91,8 +93,10 @@ foreach($product_array as $product) {
     echo "<td>" . $product->description . "</td>";
     echo "<td>" . $product->inhabitants. "</td>";
     echo "<td>" . $product->price . "</td>";
+    echo "<td>" . $product->checkbox_html . "</td>";
+
     echo "</tr>";
 }
 
-echo ($_SESSION['products'][0]);
+echo ($_SESSION['products']);
 ?>
