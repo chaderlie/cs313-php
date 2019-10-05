@@ -19,7 +19,7 @@
                     <th>Add to universe</th>
                 </tr>
         <?php 
-        include (products.php);
+        include 'products.php';
         ?>
             </table>
             <input type="submit">
