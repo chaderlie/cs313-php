@@ -1,12 +1,13 @@
 <?php 
 
+session_start();
 class Product {
     public $planet;
     public $radius;
     public $description;
     public $price;
     public $inhabitants;
-    public $image_html;
+    public $is_in_cart;
 }
 
 $product_array = array();
@@ -82,6 +83,8 @@ array_push($product_array, $jupiter);
 array_push($product_array, $saturn);
 array_push($product_array, $uranus);
 
+$_SESSION["products"] = $product_array;
+
 foreach($product_array as $product) {
     echo "<tr> <td>" . $product->planet . "</td>";
     echo "<td>" . $product->radius . "</td>";
@@ -91,4 +94,5 @@ foreach($product_array as $product) {
     echo "</tr>";
 }
 
+echo ($_SESSION['products']);
 ?>
