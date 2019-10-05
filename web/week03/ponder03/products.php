@@ -83,11 +83,11 @@ array_push($product_array, $saturn);
 array_push($product_array, $uranus);
 
 foreach($product_array as $product) {
-    echo "<tr> <td>" . $product->$planet . "</td>";
-    echo "<td>" . $product->$radius . "</td>";
-    echo "<td>" . $product->$description . "</td>";
-    echo "<td>" . $product->$inhabitants. "</td>";
-    echo "<td>" . $product->$price . "</td>";
+    echo "<tr> <td>" . $product->planet . "</td>";
+    echo "<td>" . $product->radius . "</td>";
+    echo "<td>" . $product->description . "</td>";
+    echo "<td>" . $product->inhabitants. "</td>";
+    echo "<td>" . $product->price . "</td>";
     echo "</tr>";
 }
 
