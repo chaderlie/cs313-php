@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <form action="/process_form.php"  method="post">
+        <form action="process_form.php"  method="post">
             <table>
                 <tr>
                     <th>Planet</th>
