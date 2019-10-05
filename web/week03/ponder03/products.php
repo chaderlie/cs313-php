@@ -27,12 +27,12 @@ $venus->price = "Price";
 $venus->image_html = "<input type='checkbox' name='venus' value='venus'> Venus";
 
 $earth = new Product;
-$earth >planet = "Earth";
-$earth >radius = "3,958.8 mi";
-$earth >description = "Description";
-$earth >inhabitants = "Inhabitants";
-$earth >price = "Price"; 
-$earth >image_html = "<input type='checkbox' name='earth' value='earth'> Earth";
+$earth->planet = "Earth";
+$earth->radius = "3,958.8 mi";
+$earth->description = "Description";
+$earth->inhabitants = "Inhabitants";
+$earth->price = "Price"; 
+$earth->image_html = "<input type='checkbox' name='earth' value='earth'> Earth";
 
 $mars = new Product;
 $mars->planet = "Mars";
@@ -90,6 +90,5 @@ foreach($product_array as $product) {
     echo "<td>" . $product->price . "</td>";
     echo "</tr>";
 }
-
 
 ?>
