@@ -13,7 +13,6 @@ require 'start_session.php';
 
 <body>
     <?php
-    $_SESSION['selected_products'] = [];
     foreach ($_POST['products'] as $product) {
         array_push($_SESSION['selected_products'], $product);
     }
