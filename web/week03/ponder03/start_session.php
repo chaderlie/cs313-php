@@ -36,7 +36,7 @@ $earth = new Product;
 $earth->planet = "Earth";
 $earth->radius = "3,958.8 mi";
 $earth->image = "<img id='earth' src='earth.jpg' alt='Photo of earth' width='153' height='153' onmouseover='this.style=\"transform: scale(1.5);\" onmouseout='this.style=\"transform: scale(1);\"'>";
-$earth->inhabitants = "Humans and various other species";
+$earth->inhabitants = "Humans (and others)";
 $earth->price = 928151000000;
 $earth->checkbox_html = "<input type='checkbox' name='products[]' value='Earth'>";
 

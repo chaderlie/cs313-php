@@ -44,6 +44,9 @@ require 'start_session.php';
     }
     echo "<h3>For the total price of $$total</h3>";
     ?>
+    <br />
+    <br />
+    <a href="browsing.php">Back to Browsing</a>
 </body>
 
 </html>
