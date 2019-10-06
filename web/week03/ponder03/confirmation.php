@@ -11,6 +11,7 @@ require 'start_session.php';
 </head>
 
 <body>
+    <h1>Order confirmation</h1>
     <?php
     function processText($text)
     {

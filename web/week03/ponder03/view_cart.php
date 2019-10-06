@@ -12,6 +12,10 @@ require 'start_session.php';
 </head>
 
 <body>
+    <h1>Your Shopping Cart </h1>
+    <h4>Are you ready for some cosmic creation?</h4>
+    <br/>
+    <br/>
     <?php
     foreach ($_POST['products'] as $product) {
         array_push($_SESSION['products'], $product);

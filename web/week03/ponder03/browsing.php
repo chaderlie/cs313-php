@@ -11,6 +11,12 @@ require 'start_session.php';
 
 <body>
     <div>
+        <h1> Welcome to the Planet Factory! </h1>
+        <h4>We help you build your very own universe! </h4>
+        <br/>
+        <br/>
+    </div>
+    <div>
         <form action="view_cart.php" method="post">
             <table>
                 <tr>
