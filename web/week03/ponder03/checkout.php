@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Sol Syst LCC</title>
     <link rel="stylesheet" type="text/css" href="homepage.css">
 </head>
+
 <body>
     <div>
+        <h1> Order total = </h1>
+        <?php
+        $total = 0;
+        foreach ($_SESSION['products'] as $product) { 
+            $total += $product;
+        }
+        echo "<h1>$total</h1>";
+        ?>
         <form action="confirmation.php" method="post">
             First name: <input type="text" name="firstname">
             <br />
