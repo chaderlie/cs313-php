@@ -32,7 +32,6 @@
     echo "<h4>You purchased the following planets> </h4>";
 
     foreach ($_SESSION['selected_products'] as $product1) {
-
         foreach ($_SESSION['all_products'] as $product2) {
             if (strcmp($product1, $product2->planet) == 0) {
                 echo "<h4>$product->planet </h4>";

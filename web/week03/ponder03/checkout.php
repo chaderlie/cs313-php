@@ -16,7 +16,6 @@ require 'start_session.php';
         <?php
         $total = 0;
         foreach ($_SESSION['selected_products'] as $product1) {
-
             foreach ($_SESSION['all_products'] as $product2) {
                 if (strcmp($product1, $product2->planet) == 0) {
                     echo "<h2>$product2->planet </h2>";
@@ -24,8 +23,8 @@ require 'start_session.php';
                 }
             }
         }
-
         echo "<h3>Your total price is: $$total</h3>";
+
         ?>
 
         <h4>To continue this purchase, please fill out your information below</h4>
