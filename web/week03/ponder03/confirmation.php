@@ -31,7 +31,7 @@ require 'start_session.php';
     echo "<p> $address $city, $state $zip </p>";
     echo "<p> A confirmation email was sent to $email </p>";
 
-    echo "<h4>You purchased the following planets </h4>";
+    echo "<h4>You purchased the following planets: </h4>";
 
     $total = 0;
     foreach ($_SESSION['products'] as $product1) {

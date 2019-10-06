@@ -26,6 +26,7 @@ require 'start_session.php';
                 <th>Radius of Planet</th>
                 <th>Inhabitants</th>
                 <th>Price</th>
+                <th>Remove from Cart</th>
             </tr>
             <?php
             $total = 0;
