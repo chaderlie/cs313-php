@@ -45,6 +45,7 @@ require 'start_session.php';
             }
             echo "<h3>Your total price will be: $$total</h3>";
             ?>
+            </table>
             <input type="Submit" value="Continue with Purchase">
     </form>
     <a href="browsing.php">Back to Browsing</a>
