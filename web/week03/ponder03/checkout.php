@@ -14,10 +14,15 @@ require 'start_session.php';
         <h1> Order total = </h1>
         <?php
         $total = 0;
-        foreach ($_SESSION['products'] as $product) {
-            $total += $product;
+        foreach ($_SESSION['products'] as $product1) {
+            foreach ($_SESSION['all_products'] as $product2) {
+                if ($product1 == $product2->planet) {
+                    echo "<p>Name: $product2->planet </p>";
+                    $total += $product2->price;
+                }
+            }
         }
-        echo "<h1>$total</h1>";
+        echo "<h1>$$total</h1>";
         ?>
 
         <form action="confirmation.php" method="post">

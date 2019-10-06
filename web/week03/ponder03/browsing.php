@@ -20,13 +20,21 @@ require 'start_session.php';
                     <th>Description</th>
                     <th>Inhabitants</th>
                     <th>Price</th>
-                    <th>Add to universe</th>
+                    <th>Add to Cart</th>
                 </tr>
                 <?php
-                include 'products.php';
+                foreach ($_SESSION['all_products'] as $product) {
+                    echo "<tr> <td>" . $product->planet . "</td>";
+                    echo "<td>" . $product->radius . "</td>";
+                    echo "<td>" . $product->description . "</td>";
+                    echo "<td>" . $product->inhabitants . "</td>";
+                    echo "<td>$" . $product->price . "</td>";
+                    echo "<td>" . $product->checkbox_html . "</td>";
+                    echo "</tr>";
+                }
                 ?>
             </table>
-            <input type="Submit" value="Add to Cart">
+            <input type="Submit" value="Add Planets to Cart">
         </form>
 
         <br />
