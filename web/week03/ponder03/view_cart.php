@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php
 require 'start_session.php';
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -14,7 +14,7 @@ require 'start_session.php';
 <body>
     <?php
     foreach ($_POST['products'] as $product) {
-        array_push($_SESSION['selected_products'], $product);
+        array_push($_SESSION['products'], $product);
     }
 
     ?>

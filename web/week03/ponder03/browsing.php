@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
 <?php
 require 'start_session.php';
 ?>
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <title>Browse Planets</title>
-    <link rel="stylesheet" type="text/css" href="homepage.css">
 </head>
 
 <body>
@@ -40,7 +39,7 @@ require 'start_session.php';
         <br />
     </div>
 
-    
+
 </body>
 
 </html>
