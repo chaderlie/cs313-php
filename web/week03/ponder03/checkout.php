@@ -3,6 +3,7 @@
 <?php
 require 'start_session.php';
 ?>
+
 <head>
     <meta charset="UTF-8">
     <title>Sol Syst LCC</title>
@@ -14,18 +15,25 @@ require 'start_session.php';
         <h1>You are purchasing the planets</h1>
         <?php
         $total = 0;
-        foreach ($_SESSION['products'] as $product1) {
-            
+        foreach ($_SESSION['selected_products'] as $product1) {
+
             foreach ($_SESSION['all_products'] as $product2) {
                 if (strcmp($product1, $product2->planet) == 0) {
-                    echo "<h2>$product2->planet </h2>";
-                    $total += $product2->price;
+                    array_push($_SESSION['products'], $product2);
                 }
             }
+        }
+
+        foreach ($_SESSION['products'] as $product) {
+            echo "<h2>$product->planet </h2>";
+            $total += $product->price;
         }
         echo "<h3>Your total price is: $$total</h3>";
         ?>
 
+        <h4>To continue this purchase, please fill out your information below</h4>
+        <br />
+        <br />
         <form action="confirmation.php" method="post">
             First name: <input type="text" name="firstname">
             <br />
@@ -43,11 +51,9 @@ require 'start_session.php';
             <br />
             Zipcode: <input type="text" name="zip">
             <br />
-
+            <br />
             <input type="Submit" value="Confirm Purchase">
         </form>
-
-        <br />
     </div>
 
     <img id="mercury" src="mercury.jpg" alt="Photo of Mercury" width="153" height="153" onmouseover="this.style='transform: scale(1.5);'" onmouseout="this.style='transform: scale(1);'">
