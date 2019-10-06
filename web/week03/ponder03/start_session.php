@@ -82,18 +82,10 @@ $neptune->inhabitants = "None";
 $neptune->price = 35876155; 
 $neptune->checkbox_html = "<input type='checkbox' name='products[]' value='neptune'>";
 
-array_push($product_array, $mercury);
-array_push($product_array, $venus);
-array_push($product_array, $earth);
-array_push($product_array, $mars);
-array_push($product_array, $jupiter);
-array_push($product_array, $saturn);
-array_push($product_array, $uranus);
-
 
 if (!isset($_SESSION['all_products'])) {
     $_SESSION['all_products'] = [];
-    $_SESSION['all_products'] = $product_array;
+    array_push($_SESSION['all_products'], $mercury, $venus, $earth, $mars, $jupiter, $saturn, $uranus, $neptune);
 }
 
 ?>
