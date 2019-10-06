@@ -11,19 +11,19 @@ require 'start_session.php';
 
 <body>
     <div>
-        <h1> Order total = </h1>
+        <h1>You are purchasing the planets</h1>
         <?php
         $total = 0;
         foreach ($_SESSION['products'] as $product1) {
             
             foreach ($_SESSION['all_products'] as $product2) {
                 if (strcmp($product1, $product2->planet) == 0) {
-                    echo "<p>Name: $product2->planet </p>";
+                    echo "<h2>$product2->planet </h2>";
                     $total += $product2->price;
                 }
             }
         }
-        echo "<h1>$$total</h1>";
+        echo "<h3>Your total price is: $$total</h3>";
         ?>
 
         <form action="confirmation.php" method="post">
