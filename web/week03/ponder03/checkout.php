@@ -17,7 +17,6 @@ require 'start_session.php';
         foreach ($_SESSION['products'] as $product1) {
             
             foreach ($_SESSION['all_products'] as $product2) {
-                echo $product2->planet;
                 if (strcmp($product1, $product2->planet) == 0) {
                     echo "<p>Name: $product2->planet </p>";
                     $total += $product2->price;
