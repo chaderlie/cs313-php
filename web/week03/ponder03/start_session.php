@@ -27,7 +27,7 @@ $mercury->checkbox_html = "<input type='checkbox' name='products[]' value='mercu
 $venus = new Product;
 $venus->planet = "Venus";
 $venus->radius = "3,760.4 mi";
-$venus->image = "<img id='venus' src='venus.jpg' alt='Photo of Venus' width='153' height='153' onmouseover='this.style=\"transform: scale(1.5);\"' onmouseout='this.style=\"transform: scale(1);\">";
+$venus->image = "<img id='venus' src='venus.jpg' alt='Photo of Venus' width='153' height='153' onmouseover='this.style=\"transform: scale(1.5);\"' onmouseout='this.style=\"transform: scale(1);\"'>";
 $venus->inhabitants = "None";
 $venus->price = 8817200; 
 $venus->checkbox_html = "<input type='checkbox' name='products[]' value='venus'>";
