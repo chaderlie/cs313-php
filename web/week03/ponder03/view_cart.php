@@ -16,6 +16,7 @@ require 'start_session.php';
 
     foreach ($_POST["products"] as $product) {
         array_push($_SESSION['products'], $product);
+        echo "$product";
     }
     ?>
     <form method="post" action="checkout.php">

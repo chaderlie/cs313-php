@@ -12,11 +12,12 @@
         <h1> Order total = </h1>
         <?php
         $total = 0;
-        foreach ($_SESSION['products'] as $product) { 
+        foreach ($_SESSION['products'] as $product) {
             $total += $product;
         }
         echo "<h1>$total</h1>";
         ?>
+
         <form action="confirmation.php" method="post">
             First name: <input type="text" name="firstname">
             <br />
@@ -27,9 +28,13 @@
             <br />
             <br />
             Street address: <input type="text" name="address">
+            <br />
             City: <input type="text" name="city">
+            <br />
             State: <input type="text" name="state">
+            <br />
             Zipcode: <input type="text" name="zip">
+            <br />
 
             <input type="Submit" value="Confirm Purchase">
         </form>
