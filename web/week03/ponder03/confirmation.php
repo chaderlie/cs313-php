@@ -27,6 +27,7 @@ require 'start_session.php';
     echo "<p> A confirmation email was sent to $email </p>";
 
     echo "<h4>You purchased the following planets> </h4>";
+    
     foreach ($_SESSION['products'] as $product) {
         echo "<h4>$product->planet </h4>";
         $total += $product->price;

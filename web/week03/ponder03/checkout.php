@@ -15,6 +15,7 @@ require 'start_session.php';
         <h1>You are purchasing the planets</h1>
         <?php
         $total = 0;
+        $_SESSION['products'] = [];
         foreach ($_SESSION['selected_products'] as $product1) {
 
             foreach ($_SESSION['all_products'] as $product2) {
