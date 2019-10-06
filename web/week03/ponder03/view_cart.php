@@ -14,7 +14,7 @@ require 'start_session.php';
 <body>
     <?php
 
-    foreach ($_POST["selected_products"] as $product) {
+    foreach ($_POST["products"] as $product) {
         array_push($_SESSION['selected_products'], $product);
     }
 
