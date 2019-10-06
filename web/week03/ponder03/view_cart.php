@@ -18,7 +18,7 @@ require 'start_session.php';
         array_push($_SESSION['products'], $product);
     }
     ?>
-    <form method="post" action="confirmation.php">
+    <form method="post" action="checkout.php">
         <input type="Submit" value="Continue with Purchase">
     </form>
 </body>
