@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+require 'start_session.php';
+?>
 <head>
     <meta charset="UTF-8">
     <title>Sol Syst LCC</title>
