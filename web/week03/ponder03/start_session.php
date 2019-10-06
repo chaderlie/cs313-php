@@ -59,7 +59,7 @@ $jupiter->checkbox_html = "<input type='checkbox' name='products[]' value='Jupit
 $saturn = new Product;
 $saturn->planet = "Saturn";
 $saturn->radius = "36,184 mi";
-$saturn->image = "<img id='saturn' src='saturn.jpg' alt='Photo of saturn' width='153' height='153' onmouseover='this.style=\"transform: scale(1.5);\" onmouseout='this.style=\"transform: scale(1);\">";
+$saturn->image = "<img id='saturn' src='saturn.png' alt='Photo of saturn' width='153' height='153' onmouseover='this.style=\"transform: scale(1.5);\" onmouseout='this.style=\"transform: scale(1);\">";
 $saturn->inhabitants = "None";
 $saturn->price = 84851480;
 $saturn->checkbox_html = "<input type='checkbox' name='products[]' value='Saturn'>";

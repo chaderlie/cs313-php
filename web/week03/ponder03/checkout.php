@@ -11,6 +11,12 @@ require 'start_session.php';
 
 <body>
     <div>
+        <?php
+        foreach ($_POST['products'] as $product) {
+            array_push($_SESSION['products'], $product);
+        }
+        ?>
+
         <h1>You are purchasing the planets:</h1>
         <?php
         $total = 0;
@@ -48,6 +54,9 @@ require 'start_session.php';
             <br />
             <input type="Submit" value="Confirm Purchase">
         </form>
+
+        <br />
+        <a href="browsing.php">Back to Browsing</a>
     </div>
 </body>
 
