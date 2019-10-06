@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<?php
-require 'start_session.php';
-?>
+    <?php
+    require 'start_session.php';
+    ?>
     <meta charset="UTF-8">
     <title>Confirm Universe</title>
 </head>
+
 <body>
     <?php
-    function processText($text) {
+    function processText($text)
+    {
         $safe_text = strip_tags($text);
         return $safe_text;
     }
-    
+
     $firstname = processText($_POST['firstname']);
     $lastname = processText($_POST['lastname']);
     $email = processText($_POST['email']);
@@ -27,14 +30,20 @@ require 'start_session.php';
     echo "<p> A confirmation email was sent to $email </p>";
 
     echo "<h4>You purchased the following planets> </h4>";
-    
-    foreach ($_SESSION['products'] as $product) {
-        echo "<h4>$product->planet </h4>";
-        $total += $product->price;
+
+    foreach ($_SESSION['selected_products'] as $product1) {
+
+        foreach ($_SESSION['all_products'] as $product2) {
+            if (strcmp($product1, $product2->planet) == 0) {
+                echo "<h4>$product->planet </h4>";
+                $total += $product->price;
+            }
+        }
     }
+
     echo "<h3>For the total price of $$total</h3>";
     ?>
-    
+
     ?>
 </body>
 

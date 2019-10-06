@@ -15,20 +15,16 @@ require 'start_session.php';
         <h1>You are purchasing the planets</h1>
         <?php
         $total = 0;
-        $_SESSION['products'] = [];
         foreach ($_SESSION['selected_products'] as $product1) {
 
             foreach ($_SESSION['all_products'] as $product2) {
                 if (strcmp($product1, $product2->planet) == 0) {
-                    array_push($_SESSION['products'], $product2);
+                    echo "<h2>$product2->planet </h2>";
+                    $total += $product2->price;
                 }
             }
         }
 
-        foreach ($_SESSION['products'] as $product) {
-            echo "<h2>$product->planet </h2>";
-            $total += $product->price;
-        }
         echo "<h3>Your total price is: $$total</h3>";
         ?>
 
