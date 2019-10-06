@@ -11,7 +11,7 @@ require 'start_session.php';
 
 <body>
     <div>
-        <h1>You are purchasing the planets</h1>
+        <h1>You are purchasing the planets:</h1>
         <?php
         $total = 0;
         foreach ($_SESSION['products'] as $product1) {
