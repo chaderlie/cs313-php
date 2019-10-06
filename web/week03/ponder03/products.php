@@ -18,7 +18,7 @@ $mercury->planet = "Mercury";
 $mercury->radius = "1,516 mi";
 $mercury->description = "Description";
 $mercury->inhabitants = "None";
-$mercury->price = "$3,555,020"; 
+$mercury->price = 3555020; 
 $mercury->checkbox_html = "<input type='checkbox' name='products[]' value='mercury'>";
 
 
@@ -27,7 +27,7 @@ $venus->planet = "Venus";
 $venus->radius = "3,760.4 mi";
 $venus->description = "Description";
 $venus->inhabitants = "None";
-$venus->price = "$8,817,200"; 
+$venus->price = 8817200; 
 $venus->checkbox_html = "<input type='checkbox' name='products[]' value='venus'>";
 
 $earth = new Product;
