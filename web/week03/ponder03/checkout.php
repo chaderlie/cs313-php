@@ -12,8 +12,9 @@ require 'start_session.php';
 <body>
     <div>
         <?php
+        unset($_SESSION['products']);
+        $_SESSION['products'] = [];
         foreach ($_POST['products'] as $product) {
-            unset($_SESSION['products']);
             array_push($_SESSION['products'], $product);
         }
         ?>
