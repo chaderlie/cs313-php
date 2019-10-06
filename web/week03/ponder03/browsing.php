@@ -6,7 +6,7 @@ require 'start_session.php';
 
 <head>
     <meta charset="UTF-8">
-    <title>Sol Syst LCC</title>
+    <title>Browse Planets</title>
     <link rel="stylesheet" type="text/css" href="homepage.css">
 </head>
 

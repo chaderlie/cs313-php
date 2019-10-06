@@ -6,7 +6,7 @@
     require 'start_session.php';
     ?>
     <meta charset="UTF-8">
-    <title>Confirm Universe</title>
+    <title>Confirm Purchase</title>
 </head>
 
 <body>

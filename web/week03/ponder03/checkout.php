@@ -6,8 +6,7 @@ require 'start_session.php';
 
 <head>
     <meta charset="UTF-8">
-    <title>Sol Syst LCC</title>
-    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <title>Checkout</title>
 </head>
 
 <body>
