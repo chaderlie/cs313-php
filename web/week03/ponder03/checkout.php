@@ -24,7 +24,6 @@ require 'start_session.php';
             }
         }
         echo "<h3>Your total price is: $$total</h3>";
-
         ?>
 
         <h4>To continue this purchase, please fill out your information below</h4>
@@ -51,9 +50,6 @@ require 'start_session.php';
             <input type="Submit" value="Confirm Purchase">
         </form>
     </div>
-
-    <img id="mercury" src="mercury.jpg" alt="Photo of Mercury" width="153" height="153" onmouseover="this.style='transform: scale(1.5);'" onmouseout="this.style='transform: scale(1);'">
-
 </body>
 
 </html>
