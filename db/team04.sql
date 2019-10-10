@@ -3,12 +3,16 @@ CREATE TABLE users
 , username          VARCHAR(30)     NOT NULL   
 );
 
+CREATE SEQUENCE users_n1 START WITH 1001;
+
 CREATE TABLE speakers 
 ( speaker_id        INTEGER         PRIMARY KEY
 , first_name        VARCHAR(50)     NOT NULL
 , last_name         VARCHAR(50)     NOT NULL
 , calling           VARCHAR(256)    NOT NULL
 );
+
+CREATE SEQUENCE speakers_n1 START WITH 1001;
 
 CREATE TABLE conferences
 ( conference_id     INTEGER         PRIMARY KEY 
@@ -25,7 +29,7 @@ CREATE TABLE notes
 , note_content      VARCHAR(256)
 );
 
-CREATE SEQUENCE notes START WITH 1001;
+CREATE SEQUENCE notes_n1 START WITH 1001;
 
 CREATE TABLE talks 
 ( talk_id           INTEGER         PRIMARY KEY
@@ -36,9 +40,15 @@ CREATE TABLE talks
 CREATE SEQUENCE talk_n1 START WITH 1001;
 
 INSERT INTO conferences
-( 
-,     
+( conference_id
+, speaker_id
+, conference_date
+) 
+VALUES 
+( conferences_n1.NEXTVAL
+, 
+, 
 );
 INSERT INTO talks (talk_id, conference_id, speaker_id) VALUES ();
 
-INSERT INTO notes (note)
+INSERT INTO notes (note_id, user_id, talk_id, note_content)
