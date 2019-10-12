@@ -1,11 +1,11 @@
---Drop all the existing tables until we implement something for reals
+/*Drop all the existing tables until we implement something for reals*/
 DROP TABLE photos;
 DROP TABLE member_tags;
 DROP TABLE memories;
 DROP TABLE site_users;
 DROP TABLE family_members;
 
---Create the family member table
+/*Create the family member table*/
 CREATE TABLE family_members (
     member_id               SERIAL              PRIMARY KEY,
     first_name              VARCHAR(25)         NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE family_members (
     is_male                 BOOLEAN             NOT NULL
 );
 
---Create the table of all the users of the site
+/*Create the table of all the users of the site*/
 CREATE TABLE site_users (
     site_user_id            SERIAL              PRIMARY KEY,
     username                VARCHAR(25)         NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE site_users (
     member_account          INTEGER             REFERENCES family_members(member_id)
 );
 
---Create the table for all the memories
+/*Create the table for all the memories*/
 CREATE TABLE memories (
     memory_id           SERIAL                  PRIMARY KEY,
     title               VARCHAR(256)            NOT NULL,
@@ -43,13 +43,13 @@ CREATE TABLE memories (
     is_sneaky           BOOLEAN                         
 );
 
---Create a table of all the photos, which are linked to a memory
+/*Create a table of all the photos, which are linked to a memory*/
 CREATE TABLE photos (
     photo_id            SERIAL                  PRIMARY KEY,
     memory_id           INTEGER                 REFERENCES memories(memory_id)
 ); 
 
---Create a table of all the family members that are tagged in a memory
+/*Create a table of all the family members that are tagged in a memory*/
 CREATE TABLE member_tags (
     tag_id              SERIAL                  PRIMARY KEY,
     memory_id           INTEGER                 REFERENCES memories(memory_id),
