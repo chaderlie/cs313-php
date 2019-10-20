@@ -1,0 +1,73 @@
+body {
+    background-color: #dddddd; /*A light gray*/
+    margin: 10px 50px 10px 50px;
+}
+header{
+    background-color: #B8D8BA; /*A light, mossy green*/
+    padding: 5px;
+    text-align: center;
+    font-size: 23px;
+}
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #656565; /*Dark gray*/
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Arial;
+}
+div.a {
+    font-family: arial, sans-serif;
+    color: #123456; /*A navy blue*/
+    border: 6px solid #123456;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #ffebea; /*A light coral*/
+    padding: 20px;
+    border-radius: 10px;
+}
+div.b {
+    font-family: arial, sans-serif;
+    color: #123456; /*A navy blue*/
+    border: 6px solid #123456;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+p {
+    font-size: 18px;
+    font-family: Bahnschrift;
+}
+img.logo{
+    width: 40%;
+    height: auto;
+}
+a.buttonlike{
+    border: 3px solid #123456; 
+    padding: 2px; 
+    border-radius: 4px; 
+    background-color: white;
+}
+footer {
+    background-color: #123456;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
