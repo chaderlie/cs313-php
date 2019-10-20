@@ -34,7 +34,7 @@ CREATE TABLE memories (
     , created_on          TIMESTAMP               NOT NULL
     , last_edited         TIMESTAMP               NOT NULL
     , memory_date         DATE                            
-    , memory_dscr         VARCHAR(5000)                   
+    , memory_dscr         TEXT                   
     , is_funny            BOOLEAN                         
     , is_spiritual        BOOLEAN                         
     , is_sad              BOOLEAN                         

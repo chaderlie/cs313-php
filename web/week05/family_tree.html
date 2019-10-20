@@ -1,6 +1,3 @@
-<?php
-    require(database_setup.php)
-?>
 <!DOCTYPE html>
 <html>
 
@@ -36,21 +33,13 @@
             Still working on the content and style of the thing.
             Should be working good soon!
         </p>
-        <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Children of Kirk and Katie</h3>
+        <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Who are Kirk and Katie?</h3>
         <p>
-            <ul>
-                <?php
-                foreach ($db->query('SELECT first_name, last_name, birth_date 
-            FROM family_members WHERE father_id = (SELECT member_id FROM family_members WHERE first_name = \'Kirk\');') as $row) {
-                    $first = $row['first_name'];
-                    $last = $row['last_name'];
-                    $birth = $row['birth_date'];
-                    $content = $row['content'];
-                    echo "<li>$first $last Born: $birth</li> ";
-                    echo "<br/>";
-                }
-                ?>
-                <ul>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum
         </p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
