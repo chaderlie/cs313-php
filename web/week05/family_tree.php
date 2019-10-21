@@ -41,15 +41,15 @@
         <p>
             <ul>
                 <?php
-            //     foreach ($db->query('SELECT first_name, last_name, birth_date 
-            // FROM family_members WHERE father_id = (SELECT member_id FROM family_members WHERE first_name = \'Kirk\');') as $row) {
-            //         $first = $row['first_name'];
-            //         $last = $row['last_name'];
-            //         $birth = $row['birth_date'];
-            //         $content = $row['content'];
-            //         echo "<li>$first $last Born: $birth</li> ";
-                    // echo "<br/>";
-              //  }
+                foreach ($db->query('SELECT first_name, last_name, birth_date 
+            FROM family_members WHERE father_id = (SELECT member_id FROM family_members WHERE first_name = \'Kirk\');') as $row) {
+                    $first = $row['first_name'];
+                    $last = $row['last_name'];
+                    $birth = $row['birth_date'];
+                    $content = $row['content'];
+                    echo "<li>$first $last Born: $birth</li> ";
+                    echo "<br/>";
+               }
                 ?>
                 <ul>
         </p>
