@@ -1,6 +1,6 @@
 <?php
-    require(database_setup.php);
-    get_db();
+    require "database_setup.php";
+    $db = get_db();
 ?>
 <!DOCTYPE html>
 <html>
