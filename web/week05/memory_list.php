@@ -48,9 +48,9 @@ $db = get_db();
                 echo "<p>$description</p>";
                 echo "<br/>";
                 echo "<ul>Tagged family members:";
-                foreach ($db->query("SELECT person_id FROM memory_tags 
-                WHERE memory_id=$memory_id;") as $tag_row) {
-                    $tagged_id = $tag_row["person_id"];
+               // foreach ($db->query("SELECT person_id FROM memory_tags 
+               // WHERE memory_id=$memory_id;") as $tag_row) {
+                 //   $tagged_id = $tag_row["person_id"];
                    // $tagged_name = $db->query("SELECT first_name FROM family_members 
                    // WHERE member_id=$tagged_id;");
 
