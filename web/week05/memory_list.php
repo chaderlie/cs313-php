@@ -60,6 +60,8 @@ $db = get_db();
                 AND mt.person_id = fm.member_id;");
                 while ($tag_row = $statement->fetch(PDO::FETCH_ASSOC)) {
                     echo '<li>' . $tag_row['first_name'] . ' ' . $tag_row['last_name'] . '</li>';
+                    echo "<br/>";
+
                 }
                 echo "</ul>";
             }
