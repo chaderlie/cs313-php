@@ -25,7 +25,7 @@ VALUES
     'It was Christmas and we built a fort out of boxes! Then we slept in it.',
     TRUE
   );
-  
+
 INSERT INTO
   memories (
     title,
@@ -87,14 +87,7 @@ VALUES
       FROM
         memories
       WHERE
-        owner_id = (
-          SELECT
-            member_id
-          FROM
-            family_members
-          WHERE
-            first_name='Claire'
-        )
+        title = 'Littlest Pet Shop Empire'
     ),
     (
       SELECT
@@ -103,5 +96,49 @@ VALUES
         family_members
       WHERE
         first_name = 'Claire'
+    )
+  );
+
+  INSERT INTO
+  member_tags (memory_id, person_id)
+VALUES
+  (
+    (
+      SELECT
+        memory_id
+      FROM
+        memories
+      WHERE
+        title = 'Littlest Pet Shop Empire'
+    ),
+    (
+      SELECT
+        member_id
+      FROM
+        family_members
+      WHERE
+        first_name = 'Kraig'
+    )
+  );
+
+  INSERT INTO
+  member_tags (memory_id, person_id)
+VALUES
+  (
+    (
+      SELECT
+        memory_id
+      FROM
+        memories
+      WHERE
+        title = 'Built a Cardboard House'
+    ),
+    (
+      SELECT
+        member_id
+      FROM
+        family_members
+      WHERE
+        first_name = 'Lance'
     )
   );
