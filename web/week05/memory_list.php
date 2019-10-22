@@ -47,8 +47,8 @@ $db = get_db();
                 echo "<p><b>$date</b></p>";
                 echo "<p>$description</p>";
                 echo "<br/>";
-
-                echo "<ul> Tags:";
+                echo "Family Members Tagged: ";
+                echo "<ul>";
                 $statement = $db->query("SELECT
                 first_name,
                 last_name
@@ -59,7 +59,7 @@ $db = get_db();
                 mt.memory_id = $memory_id
                 AND mt.person_id = fm.member_id;");
                 while ($tag_row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo '<li>' . $tag_row['first_name'] . ' ' . $row['last_name'] . '</li>';
+                    echo '<li>' . $tag_row['first_name'] . ' ' . $tag_row['last_name'] . '</li>';
                 }
                 echo "</ul>";
             }
