@@ -25,6 +25,7 @@ VALUES
     'It was Christmas and we built a fort out of boxes! Then we slept in it.',
     TRUE
   );
+  
 INSERT INTO
   memories (
     title,
@@ -53,6 +54,7 @@ VALUES
 in fences! Had many towns for our 200+ Littlest Pet Shop pets.',
     TRUE
   );
+
 INSERT INTO
   member_tags (memory_id, person_id)
 VALUES
