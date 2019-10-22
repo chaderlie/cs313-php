@@ -47,6 +47,21 @@ $db = get_db();
                 echo "<p><b>$date</b></p>";
                 echo "<p>$description</p>";
                 echo "<br/>";
+
+                echo "<ul> Tags:";
+                $statement = $db->query("SELECT
+                first_name,
+                last_name
+              FROM
+                member_tags mt,
+                family_members fm
+              WHERE
+                mt.memory_id = $memory_id
+                AND mt.person_id = fm.member_id;");
+                while ($tag_row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<li>' . $tag_row['first_name'] . ' ' . $row['last_name'] . '</li>';
+                }
+                echo "</ul>";
             }
             ?>
         </p>

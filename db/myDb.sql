@@ -51,7 +51,7 @@ CREATE TABLE photos (
 
 /*Create a table of all the family members that are tagged in a memory*/
 CREATE TABLE member_tags (
-    tag_id              SERIAL                  PRIMARY KEY
+    tag_id                SERIAL                  PRIMARY KEY
     , memory_id           INTEGER                 REFERENCES memories(memory_id)
     , person_id           INTEGER                 REFERENCES family_members(member_id)
 );
