@@ -55,7 +55,7 @@ $db = get_db();
                    // WHERE member_id=$tagged_id;");
 
                     echo "<li>$tagged_id</li>";
-                }
+                //}
                 echo '</ul>';
             }
             ?>
