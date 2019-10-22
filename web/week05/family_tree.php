@@ -1,6 +1,6 @@
 <?php
-    require "database_setup.php";
-    $db = get_db();
+require "database_setup.php";
+$db = get_db();
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,9 +46,25 @@
                     $content = $row['content'];
                     echo "<li>$first $last, born: $birth</li> ";
                     echo "<br/>";
-               }
+                }
                 ?>
-                <ul>
+            </ul>
+            <h4 style="font-family:'Yu Gothic'; text-transform: uppercase;">The following family members
+                have created an account on this website</h4>
+
+            <ul>
+                <?php
+                foreach ($db->query('SELECT first_name,
+                last_name 
+            FROM site_users su, family_members fm
+            WHERE su.member_id = fm.member_id;') as $row) {
+                    $first = $row['first_name'];
+                    $last = $row['last_name'];
+                    echo "<li>$first $last</li> ";
+                    echo "<br/>";
+                }
+                ?>
+            </ul>
         </p>
         <div style="text-align: center; font-family: Arial; font-size: 18px;">
             <a href="family_tree.php" class="buttonlike">Family Tree</a>
