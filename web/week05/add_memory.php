@@ -4,11 +4,13 @@ $db = get_db();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Add a Family Memory</title>
     <link rel="stylesheet" type="text/css" href="family_tree.css" />
 </head>
+
 <body>
     <header>
         <h1 class="logo">Haderlie Et Al.</h1>
@@ -28,34 +30,19 @@ $db = get_db();
                 <label>Your First Name</label>
                 <input type="text" name="first_name_input" placeholder="First Name">
             </div>
+            <br />
             <div class="form-group">
                 <label>Your Last name</label>
                 <input type="text" class="input_text" name="last_name_input" placeholder="Last Name">
             </div>
+            <br>
+            <br>
+            <label>Story title</label>
+            <input type="text" name="story_title" placeholder="Story title">
             <div class="form-group">
                 <label><b>Your Story</b></label>
                 <br />
-                <textarea class="form-control" id="story_content" rows="20" cols="100" ></textarea>
-            </div>
-            <div class="form-group">
-                <label>Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Example multiple select</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+                <textarea class="form-control" id="story_content" rows="20" cols="100"></textarea>
             </div>
             <div>
                 <label>What kind of a story is this?</label> <br />
@@ -71,16 +58,15 @@ $db = get_db();
                 <label for="exampleFormControlSelect2">Please tag family members!</label>
                 <br />
                 <?php
-                foreach ($db->query('SELECT first_name, last_name FROM family_members ORDER BY first_name ASC;') as $row) 
-                {
-                        $first = $row['first_name'];
-                        $last = $row['last_name'];
-                        echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first'>$first $last <br />";
+                foreach ($db->query('SELECT first_name, last_name FROM family_members ORDER BY first_name ASC;') as $row) {
+                    $first = $row['first_name'];
+                    $last = $row['last_name'];
+                    echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first'>$first $last <br />";
                 }
                 ?>
             </div>
             <div>
-                <label for="exampleFormControlSelect2">Please give the date (or an estimate) 
+                <label for="exampleFormControlSelect2">Please give the date (or an estimate)
                     of when this occured</label>
                 <input type="date" name="memory_date">
             </div>
