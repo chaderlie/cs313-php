@@ -28,19 +28,20 @@ CREATE TABLE site_users (
 
 /*Create the table for all the memories*/
 CREATE TABLE memories (
-    memory_id           SERIAL                  PRIMARY KEY
-    , title               VARCHAR(256)            NOT NULL
-    , owner_id            INTEGER                 REFERENCES family_members(member_id)
-    , created_on          TIMESTAMP               NOT NULL
-    , last_edited         TIMESTAMP               NOT NULL
-    , memory_date         DATE                            
-    , memory_dscr         TEXT                   
-    , is_funny            BOOLEAN                         
-    , is_spiritual        BOOLEAN                         
-    , is_sad              BOOLEAN                         
-    , is_heartwarming     BOOLEAN                         
-    , is_scary            BOOLEAN                         
-    , is_sneaky           BOOLEAN                         
+    memory_id                   SERIAL                  PRIMARY KEY
+    , title                     VARCHAR(256)            NOT NULL
+    , owner_id                  INTEGER                 REFERENCES family_members(member_id)
+    , created_on                TIMESTAMP               NOT NULL
+    , last_edited               TIMESTAMP               NOT NULL
+    , memory_date               DATE                            
+    , memory_dscr               TEXT                   
+    , is_funny                  BOOLEAN                         
+    , is_spiritual              BOOLEAN                         
+    , is_sad                    BOOLEAN                         
+    , is_heartwarming           BOOLEAN                         
+    , is_scary                  BOOLEAN                         
+    , is_sneaky                 BOOLEAN  
+    , got_someone_in_trouble    BOOLEAN                       
 );
 
 /*Create a table of all the photos, which are linked to a memory*/
