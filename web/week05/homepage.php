@@ -24,6 +24,7 @@
     <li><a href="homepage.php">Home</a></li>
     <li><a href="family_tree.php">Family Tree</a></li>
     <li><a href="memory_list.php">Memories</a></li>
+    <li><a href="add_memory.php">Add a Memory</a></li>
   </ul>
   <div class="a">
     <h1 style="font-family:'Yu Gothic'; text-transform:uppercase">Welcome to Haderlie et al.</h1>
@@ -45,6 +46,8 @@
     <div style="text-align: center; font-family: Arial; font-size: 18px;">
       <a href="family_tree.php" class="buttonlike">Family Tree</a>
       <a href="memory_list.php" class="buttonlike">Memories</a>
+      <a href="add_memory.php" class="buttonlike">Add Memory</a>
+
     </div>
   </div>
   <footer>Thank you for visiting!</footer>
