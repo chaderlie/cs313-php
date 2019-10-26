@@ -75,7 +75,7 @@ $db = get_db();
                 foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) {
                         $first = $row['first_name'];
                         $last = $row['last_name'];
-                        echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first-$last'>$first $last <br />"
+                        echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first'>$first $last <br />";
                 ?>
             </div>
             <div>
