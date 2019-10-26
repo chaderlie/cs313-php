@@ -8,14 +8,6 @@ $db = get_db();
     <meta charset="utf-8">
     <title>Add a Family Memory</title>
     <link rel="stylesheet" type="text/css" href="family_tree.css" />
-    <style>
-        img.intext {
-            border-radius: 5px;
-            width: 15%;
-            height: auto;
-            margin: 3px 6px 3px 6px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -38,7 +30,7 @@ $db = get_db();
             </div>
             <div class="form-group">
                 <label>Your Last name</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" name="last_name_input" placeholder="Last Name">
+                <input type="text" class="input_text" name="last_name_input" placeholder="Last Name">
             </div>
             <div class="form-group">
                 <label>Story</label>
