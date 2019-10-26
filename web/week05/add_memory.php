@@ -4,7 +4,6 @@ $db = get_db();
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Haderlie Family Tree</title>
@@ -18,7 +17,6 @@ $db = get_db();
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1 class="logo">Haderlie Et Al.</h1>
@@ -72,10 +70,12 @@ $db = get_db();
             <div>
                 <label for="exampleFormControlSelect2">Please tag those who were involved</label>
                 <?php
-                foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) {
+                foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) 
+                {
                         $first = $row['first_name'];
                         $last = $row['last_name'];
                         echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first'>$first $last <br />";
+                }
                 ?>
             </div>
             <div>
