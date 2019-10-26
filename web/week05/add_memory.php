@@ -31,21 +31,21 @@ $db = get_db();
         <h1 style="font-family:'Yu Gothic'; text-transform:uppercase">Add a Memory</h1>
         <p>Remember something funny? Heartwarming? Spiritual? Record your memory here so
             the entire family can remember it too! </p>
-        <form>
+        <form action='insert_memory.php' method='post'>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Your First Name</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" name="first_name_input" placeholder="First Name">
+                <label>Your First Name</label>
+                <input type="text" name="first_name_input" placeholder="First Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Your Last name</label>
+                <label>Your Last name</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" name="last_name_input" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Story</label>
+                <label>Story</label>
                 <textarea class="form-control" id="story_content" ></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
+                <label>Example select</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
                     <option>2</option>
@@ -55,7 +55,7 @@ $db = get_db();
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <label>Example multiple select</label>
                 <select multiple class="form-control" id="exampleFormControlSelect2">
                     <option>1</option>
                     <option>2</option>
@@ -65,8 +65,7 @@ $db = get_db();
                 </select>
             </div>
             <div>
-                <label for="exampleFormControlSelect2">What kind of a story is this?</label>
-
+                <label>What kind of a story is this?</label> <br />
                 <input type="checkbox" name="attribute_tag[]" value="funny">Funny<br>
                 <input type="checkbox" name="attribute_tag[]" value="spiritual">Spiritual<br>
                 <input type="checkbox" name="attribute_tag[]" value="sneaky">Sneaky<br>
@@ -76,10 +75,10 @@ $db = get_db();
             </div>
             <br />
             <div>
-                <label for="exampleFormControlSelect2">Please tag those who were involved</label>
+                <label for="exampleFormControlSelect2">Please tag family members!</label>
                 <br />
                 <?php
-                foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) 
+                foreach ($db->query('SELECT first_name, last_name FROM family_members ORDER BY first_name ASC;') as $row) 
                 {
                         $first = $row['first_name'];
                         $last = $row['last_name'];
@@ -88,7 +87,8 @@ $db = get_db();
                 ?>
             </div>
             <div>
-                <label for="exampleFormControlSelect2">Please give the date (or an estimate) of when this occured</label>
+                <label for="exampleFormControlSelect2">Please give the date (or an estimate) 
+                    of when this occured</label>
                 <input type="date" name="memory_date">
             </div>
             <br />
