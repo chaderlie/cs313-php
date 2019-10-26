@@ -6,7 +6,7 @@ $db = get_db();
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Haderlie Family Tree</title>
+    <title>Add a Family Memory</title>
     <link rel="stylesheet" type="text/css" href="family_tree.css" />
     <style>
         img.intext {
@@ -39,6 +39,10 @@ $db = get_db();
             <div class="form-group">
                 <label for="exampleFormControlInput1">Your Last name</label>
                 <input type="text" class="form-control mb-2 mr-sm-2" name="last_name_input" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Story</label>
+                <textarea class="form-control" id="story_content" ></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
@@ -87,11 +91,11 @@ $db = get_db();
                 <label for="exampleFormControlSelect2">Please give the date (or an estimate) of when this occured</label>
                 <input type="date" name="memory_date">
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Story</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+            <br />
+            <input type="submit" value="Add Story">
         </form>
+        <br />
+        <br />
         <div style="text-align: center; font-family: Arial; font-size: 18px;">
             <a href="family_tree.php" class="buttonlike">Family Tree</a>
             <a href="memory_list.php" class="buttonlike">Memories</a>
