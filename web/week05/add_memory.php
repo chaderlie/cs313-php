@@ -59,6 +59,8 @@ $db = get_db();
                 </select>
             </div>
             <div>
+                <label for="exampleFormControlSelect2">What kind of a story is this?</label>
+
                 <input type="checkbox" name="attribute_tag[]" value="funny">Funny<br>
                 <input type="checkbox" name="attribute_tag[]" value="spiritual">Spiritual<br>
                 <input type="checkbox" name="attribute_tag[]" value="sneaky">Sneaky<br>
@@ -66,8 +68,18 @@ $db = get_db();
                 <input type="checkbox" name="attribute_tag[]" value="got_someone_in_trouble">Got-someone-in-trouble<br>
                 <input type="checkbox" name="attribute_tag[]" value="scary">Scary<br>
             </div>
+            <br />
             <div>
-            <label for="exampleFormControlSelect2">Please give the date (or an estimate) of when this occured</label>
+                <label for="exampleFormControlSelect2">Please tag those who were involved</label>
+                <?php
+                foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) {
+                        $first = $row['first_name'];
+                        $last = $row['last_name'];
+                        echo "<input type='checkbox' name='tagged_fam_mems[]' value='$first-$last'>$first $last <br />"
+                ?>
+            </div>
+            <div>
+                <label for="exampleFormControlSelect2">Please give the date (or an estimate) of when this occured</label>
                 <input type="date" name="memory_date">
             </div>
             <div class="form-group">
