@@ -33,8 +33,12 @@ $db = get_db();
             the entire family can remember it too! </p>
         <form>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="exampleFormControlInput1">Your First Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" name="first_name_input" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Your Last name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" name="last_name_input" placeholder="Last Name">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
@@ -69,6 +73,7 @@ $db = get_db();
             <br />
             <div>
                 <label for="exampleFormControlSelect2">Please tag those who were involved</label>
+                <br />
                 <?php
                 foreach ($db->query('SELECT first_name, last_name FROM family_members;') as $row) 
                 {
