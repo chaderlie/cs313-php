@@ -33,8 +33,9 @@ $db = get_db();
                 <input type="text" class="input_text" name="last_name_input" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <label>Story</label>
-                <textarea class="form-control" id="story_content" ></textarea>
+                <label><b>Your Story</b></label>
+                <br />
+                <textarea class="form-control" id="story_content" rows="20" cols="100" ></textarea>
             </div>
             <div class="form-group">
                 <label>Example select</label>
