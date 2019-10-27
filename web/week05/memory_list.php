@@ -36,18 +36,18 @@ $db = get_db();
 
         <p>
             <?php
-            foreach ($db->query('SELECT memory_id, title, memory_dscr, memory_date 
+            foreach ($db->query('SELECT memory_id, title, memory_content, memory_date 
             FROM memories;') as $row) {
                 $memory_id = $row['memory_id'];
 
                 $title = $row['title'];
-                $description = $row['memory_dscr'];
+                $content = $row['memory_content'];
                 $date = $row['memory_date'];
                 $content = $row['content'];
 
                 echo "<h3>$title</h3> ";
                 echo "<p><b>$date</b></p>";
-                echo "<p>$description</p>";
+                echo "<p>$content</p>";
                 echo "<br/>";
                 echo "Family Members Tagged: ";
                 echo "<ul>";

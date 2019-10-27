@@ -1,6 +1,8 @@
 <?php
 require "database_setup.php";
 $db = get_db();
+$first_name = $_POST['first_name_input'];
+$title = $_POST['story_title'];
 try {
     $query = "INSERT INTO memories (
     owner_id
@@ -17,11 +19,11 @@ try {
     , :memory_date
     , :content);";
 
-    $first_name = $_POST['first_name_input'];
+    
 
     $statement = $db->prepare($query);
     $statement->bindValue(':first', $first_name);
-    $statement->bindValue(':last', $_POST['last_name_input']);
+    $statement->bindValue(':last', $title);
     $statement->bindValue(':title', $_POST['story_title']);
     $statement->bindValue(':memory_date', $_POST['memory_date']);
     $statement->bindValue(':content', $_POST['story_content']);
