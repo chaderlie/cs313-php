@@ -40,17 +40,17 @@ try {
     $statement->bindValue(':memory_date', $_POST['memory_date']);
     $statement->bindValue(':content', $_POST['story_content']);
 
-    $statement->bindValue(':funny', false);
-    $statement->bindValue(':spiritual', false);
-    $statement->bindValue(':heartwarming', false);
-    $statement->bindValue(':scary', false);
-    $statement->bindValue(':sneaky', false);
-    $statement->bindValue(':sad', false);
-    $statement->bindValue(':got_someone_in_trouble', false);
+    $statement->bindValue(':funny', FALSE);
+    $statement->bindValue(':spiritual', FALSE);
+    $statement->bindValue(':heartwarming', FALSE);
+    $statement->bindValue(':scary', FALSE);
+    $statement->bindValue(':sneaky', FALSE);
+    $statement->bindValue(':sad', FALSE);
+    $statement->bindValue(':got_someone_in_trouble', FALSE);
 
     if (!empty($_POST['attribute_tag'])) {
         foreach ($_POST['attribute_tag'] as $tag) {
-            $statement->bindValue(":$tag", true);
+            $statement->bindValue(":$tag", TRUE);
         }
     }
     $statement->execute();
