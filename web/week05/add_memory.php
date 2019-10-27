@@ -46,7 +46,7 @@ $db = get_db();
             <div class="form-group">
                 <label><b>Your Story</b></label>
                 <br />
-                <textarea class="form-control" id="story_content" rows="20" cols="100"></textarea>
+                <textarea class="form-control" name="story_content" rows="20" cols="100"></textarea>
             </div>
             <div>
                 <label>What kind of a story is this?</label> <br />
