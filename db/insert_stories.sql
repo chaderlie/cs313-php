@@ -56,7 +56,7 @@ in fences! Had many towns for our 200+ Littlest Pet Shop pets.',
   );
 
 INSERT INTO
-  member_tags (memory_id, person_id)
+  member_tags (memory_id, member_id)
 VALUES
   (
     (
@@ -78,7 +78,7 @@ VALUES
   );
   
 INSERT INTO
-  member_tags (memory_id, person_id)
+  member_tags (memory_id, member_id)
 VALUES
   (
     (
@@ -100,7 +100,7 @@ VALUES
   );
 
   INSERT INTO
-  member_tags (memory_id, person_id)
+  member_tags (memory_id, member_id)
 VALUES
   (
     (
@@ -122,7 +122,7 @@ VALUES
   );
 
   INSERT INTO
-  member_tags (memory_id, person_id)
+  member_tags (memory_id, member_id)
 VALUES
   (
     (

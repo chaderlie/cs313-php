@@ -49,5 +49,5 @@ CREATE TABLE photos (
 CREATE TABLE member_tags (
     tag_id                SERIAL                  PRIMARY KEY
     , memory_id           INTEGER                 REFERENCES memories(memory_id)
-    , person_id           INTEGER                 REFERENCES family_members(member_id)
+    , member_id           INTEGER                 REFERENCES family_members(member_id)
 );
