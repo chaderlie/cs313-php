@@ -19,7 +19,7 @@ try {
     VALUES (
     (SELECT member_id FROM family_members WHERE first_name = :first AND last_name = :last)
     , CURRENT_TIMESTAMP()
-    , CURRENT_TIMESTAMP
+    , CURRENT_TIMESTAMP()
     , :title
     , :memory_date
     , :content
