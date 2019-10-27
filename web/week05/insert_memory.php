@@ -40,19 +40,19 @@ try {
     $statement->bindValue(':memory_date', $_POST['memory_date']);
     $statement->bindValue(':content', $_POST['story_content']);
 
-    $statement->bindValue(':funny', FALSE);
-    $statement->bindValue(':spiritual', FALSE);
-    $statement->bindValue(':heartwarming', FALSE);
-    $statement->bindValue(':scary', FALSE);
-    $statement->bindValue(':sneaky', FALSE);
-    $statement->bindValue(':sad', FALSE);
-    $statement->bindValue(':got_someone_in_trouble', FALSE);
+    $statement->bindValue(':funny', isset($_POST['funny']));
+    $statement->bindValue(':spiritual', isset($_POST['spiritual']));
+    $statement->bindValue(':heartwarming', isset($_POST['heartwarming']));
+    $statement->bindValue(':scary', isset($_POST['scary']));
+    $statement->bindValue(':sneaky', isset($_POST['sneaky']));
+    $statement->bindValue(':sad', isset($_POST['sad']));
+    $statement->bindValue(':got_someone_in_trouble', isset($_POST['got_someone_in_trouble']));
 
-    if (!empty($_POST['attribute_tag'])) {
-        foreach ($_POST['attribute_tag'] as $tag) {
-            $statement->bindValue(":$tag", TRUE);
-        }
-    }
+//    if (!empty($_POST['attribute_tag'])) {
+  //      foreach ($_POST['attribute_tag'] as $tag) {
+    //        $statement->bindValue(":$tag", TRUE);
+      //  }
+   // }
     $statement->execute();
 } catch (Exception $ex) {
     echo "Error with DB. Details: $ex";

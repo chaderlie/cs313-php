@@ -48,12 +48,12 @@ $db = get_db();
             </div>
             <div>
                 <label>What kind of a story is this?</label> <br />
-                <input type="checkbox" name="attribute_tag[]" value="funny">Funny<br>
-                <input type="checkbox" name="attribute_tag[]" value="spiritual">Spiritual<br>
-                <input type="checkbox" name="attribute_tag[]" value="sneaky">Sneaky<br>
-                <input type="checkbox" name="attribute_tag[]" value="sad">Sad<br>
-                <input type="checkbox" name="attribute_tag[]" value="got_someone_in_trouble">Got-someone-in-trouble<br>
-                <input type="checkbox" name="attribute_tag[]" value="scary">Scary<br>
+                <input type="checkbox" name="funny">Funny<br>
+                <input type="checkbox" name="spiritual">Spiritual<br>
+                <input type="checkbox" name="sneaky">Sneaky<br>
+                <input type="checkbox" name="sad">Sad<br>
+                <input type="checkbox" name="got_someone_in_trouble">Got-someone-in-trouble<br>
+                <input type="checkbox" name="scary">Scary<br>
             </div>
             <br />
             <div>
