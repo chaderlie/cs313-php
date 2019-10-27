@@ -1,3 +1,5 @@
+
+
 /*Create the family member table*/
 CREATE TABLE family_members (
     member_id               SERIAL              PRIMARY KEY

@@ -24,6 +24,7 @@ try {
     , :memory_date
     , :content
     , :funny
+    , :sad
     , :spiritual
     , :heartwarming
     , :scary
@@ -44,6 +45,7 @@ try {
     $statement->bindValue(':heartwarming', false);
     $statement->bindValue(':scary', false);
     $statement->bindValue(':sneaky', false);
+    $statement->bindValue(':sad', false);
     $statement->bindValue(':got_someone_in_trouble', false);
 
     if (!empty($_POST['attribute_tag'])) {
