@@ -8,7 +8,7 @@ try {
     , last_edited
     , title
     , memory_date
-    , memory_content
+    , memory_content)
     VALUES (
     (SELECT member_id FROM family_members WHERE first_name = :first AND last_name = :last)
     , CURRENT_TIMESTAMP
