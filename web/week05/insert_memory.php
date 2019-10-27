@@ -93,7 +93,7 @@ if (!empty($_POST['tagged_fam_mems'])) {
         <p>You inserted a new memory with the title: <?php echo ($title); ?></p>
         <br />
         <br />
-        <form>
+        <form action="add_memory.php">
             <input type="submit" value="Add Another Story">
         </form>
         <br />

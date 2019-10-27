@@ -59,7 +59,7 @@ $db = get_db();
                 family_members fm
               WHERE
                 mt.memory_id = $memory_id
-                AND mt.person_id = fm.member_id;");
+                AND mt.member_id = fm.member_id;");
                 while ($tag_row = $statement->fetch(PDO::FETCH_ASSOC)) {
                     echo '<li>' . $tag_row['first_name'] . ' ' . $tag_row['last_name'] . '</li>';
                     echo "<br/>";
