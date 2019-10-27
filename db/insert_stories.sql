@@ -5,7 +5,7 @@ INSERT INTO
     created_on,
     last_edited,
     memory_date,
-    memory_dscr,
+    memory_content,
     is_funny
   )
 VALUES
@@ -33,7 +33,7 @@ INSERT INTO
     created_on,
     last_edited,
     memory_date,
-    memory_dscr,
+    memory_content,
     is_funny
   )
 VALUES

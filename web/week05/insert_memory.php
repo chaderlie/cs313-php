@@ -8,7 +8,7 @@ try {
     , last_edited
     , title
     , memory_date
-    , memory_descr
+    , memory_content
     , is_funny
     , is_spiritual
     , is_sad
