@@ -29,7 +29,6 @@ $db = get_db();
         <li><a href="family_tree.php">Family Tree</a></li>
         <li><a href="memory_list.php">Memories</a></li>
         <li><a href="add_memory.php">Add a Memory</a></li>
-
     </ul>
     <div class="a">
         <h1 style="font-family:'Yu Gothic'; text-transform:uppercase">Family Stories</h1>
@@ -41,13 +40,13 @@ $db = get_db();
                 $memory_id = $row['memory_id'];
 
                 $title = $row['title'];
-                $content = $row['memory_content'];
+                $memory_content = $row['memory_content'];
                 $date = $row['memory_date'];
                 $content = $row['content'];
 
                 echo "<h3>$title</h3> ";
                 echo "<p><b>$date</b></p>";
-                echo "<p>$content</p>";
+                echo "<p>$memory_content</p>";
                 echo "<br/>";
                 echo "Family Members Tagged: ";
                 echo "<ul>";
