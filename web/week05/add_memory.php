@@ -27,6 +27,8 @@ $db = get_db();
         <h1 style="font-family:'Yu Gothic'; text-transform:uppercase">Add a Memory</h1>
         <p>Remember something funny? Heartwarming? Spiritual? Record your memory here so
             the entire family can remember it too! </p>
+            <p>NOTE TO TEACHER: This will currently only work for family members. Use my name
+                (Claire Hocker) if you'd like to test it. </p>
         <form action='insert_memory.php' method='post'>
             <div class="form-group">
                 <label>Your First Name</label>

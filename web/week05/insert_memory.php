@@ -49,7 +49,7 @@ try {
 
 $query = ("INSERT INTO member_tags (memory_id, member_id)
 VALUES ((SELECT memory_id FROM memories WHERE title = :title)
-    , (SELECT member_id FROM family_members WHERE first_name = :first_name));");
+    , (SELECT member_id FROM family_members WHERE first_name = :first));");
 
 if (!empty($_POST['tagged_fam_mems'])) {
     foreach ($_POST['tagged_fam_mems'] as $member) {
@@ -57,7 +57,7 @@ if (!empty($_POST['tagged_fam_mems'])) {
 
             $statement = $db->prepare($query);
             $statement->bindValue(':title', $_POST['story_title']);
-            $statement->bindValue(':first_name', $member);
+            $statement->bindValue(':first', $member);
             $statement->execute();
         } catch (Exception $ex) {
             echo "Error with DB. Details: $ex";
