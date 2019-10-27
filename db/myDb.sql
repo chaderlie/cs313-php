@@ -1,10 +1,3 @@
-/*Drop all the existing tables until we implement something for reals*/
-DROP TABLE photos;
-DROP TABLE member_tags;
-DROP TABLE memories;
-DROP TABLE site_users;
-DROP TABLE family_members;
-
 /*Create the family member table*/
 CREATE TABLE family_members (
     member_id               SERIAL              PRIMARY KEY
