@@ -9,27 +9,13 @@ try {
     , title
     , memory_date
     , memory_content
-    , is_funny
-    , is_spiritual
-    , is_sad
-    , is_heartwarming
-    , is_scary
-    , is_sneaky
-    , got_someone_in_trouble)
     VALUES (
     (SELECT member_id FROM family_members WHERE first_name = :first AND last_name = :last)
     , CURRENT_TIMESTAMP
     , CURRENT_TIMESTAMP
     , :title
     , :memory_date
-    , :content
-    , :funny
-    , :sad
-    , :spiritual
-    , :heartwarming
-    , :scary
-    , :sneaky
-    , :got_someone_in_trouble);";
+    , :content);";
 
     $first_name = $_POST['first_name_input'];
 
@@ -40,13 +26,13 @@ try {
     $statement->bindValue(':memory_date', $_POST['memory_date']);
     $statement->bindValue(':content', $_POST['story_content']);
 
-    $statement->bindValue(':funny', isset($_POST['funny']));
-    $statement->bindValue(':spiritual', isset($_POST['spiritual']));
-    $statement->bindValue(':heartwarming', isset($_POST['heartwarming']));
-    $statement->bindValue(':scary', isset($_POST['scary']));
-    $statement->bindValue(':sneaky', isset($_POST['sneaky']));
-    $statement->bindValue(':sad', isset($_POST['sad']));
-    $statement->bindValue(':got_someone_in_trouble', isset($_POST['got_someone_in_trouble']));
+   // $statement->bindValue(':funny', isset($_POST['funny']));
+    //$statement->bindValue(':spiritual', isset($_POST['spiritual']));
+    //$statement->bindValue(':heartwarming', isset($_POST['heartwarming']));
+    //$statement->bindValue(':scary', isset($_POST['scary']));
+    //$statement->bindValue(':sneaky', isset($_POST['sneaky']));
+    //$statement->bindValue(':sad', isset($_POST['sad']));
+    //$statement->bindValue(':got_someone_in_trouble', isset($_POST['got_someone_in_trouble']));
 
 //    if (!empty($_POST['attribute_tag'])) {
   //      foreach ($_POST['attribute_tag'] as $tag) {
