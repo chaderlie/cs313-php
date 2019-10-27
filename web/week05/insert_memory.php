@@ -38,7 +38,7 @@ try {
     $statement->bindValue(':last', $_POST['last_name_input']);
     $statement->bindValue(':title', $_POST['story_title']);
     $statement->bindValue(':memory_date', $_POST['memory_date']);
-    $statement->bindValue(':first', $first_name);
+    $statement->bindValue(':content', $_POST['story_content']);
 
     $statement->bindValue(':funny', false);
     $statement->bindValue(':spiritual', false);
