@@ -63,6 +63,7 @@
           $statement->bindValue(':next_month', $next_month);
 
           foreach ($db-execute as $row) {
+            echo "IN THE LOOP";
             $first = $row['first_name'];
             $last = $row['last_name'];
             $birth_month = $row['birth_month'];
@@ -70,9 +71,6 @@
 
             $dateObj   = DateTime::createFromFormat('!m', $birth_month);
             $monthName = $dateObj->format('F');
-            echo $first;
-            echo $last;
-            echo $birth_month;
             $order = "";
             if ($day == 1) {
               $order = "st";
