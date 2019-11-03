@@ -52,7 +52,12 @@
           $month_after = ($month + 2) % 12;
           if ($next_month == 0)
             $next_month = 12;
-
+          echo $month;
+          echo "<br/>";
+          echo $next_month;
+          echo "<br/>";
+          echo $month_after;
+          echo "<br/>";
 
           foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month
             FROM family_members WHERE (birth_month = $month OR birth_month = $next_month OR birth_month = $month_after) 
@@ -60,10 +65,10 @@
                       birth_date ASC);") as $row) {
             $first = $row['first_name'];
             $last = $row['last_name'];
-            $month = $row['birth_month'];
+            $birth_month = $row['birth_month'];
             $day = $row['birth_date'];
 
-            $dateObj   = DateTime::createFromFormat('!m', $month);
+            $dateObj   = DateTime::createFromFormat('!m', $birth_month);
             $monthName = $dateObj->format('F');
 
             $order = "";
