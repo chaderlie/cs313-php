@@ -59,8 +59,8 @@ $db = get_db();
             $next_month = 12;
         
           foreach ($db->query("SELECT first_name, last_name, birth_date
-            FROM family_members WHERE (birth_month = $month AND birth_date >= $day) 
-            ORDER BY birth_date ASC;") as $row) {
+            FROM family_members WHERE (birth_month = $month OR birth_month = $next_month) 
+            ORDER BY birth_month ASC, birth_date ASC;") as $row) {
             $first = $row['first_name'];
             $last = $row['last_name'];
             $birth_month = $row['birth_month'];
