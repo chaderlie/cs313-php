@@ -57,10 +57,10 @@
           echo "<br/>";
 
       
-          foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = 11 OR birth_month = 12);") as $row) {
+          foreach ($db->query("SELECT first_name FROM family_members WHERE birth_month = 11;") as $row) {
             echo "IN THE LOOP";
             $first = $row['first_name'];
-            $last = $row['last_name'];
+            //$last = $row['last_name'];
             $birth_month = $row['birth_month'];
             $day = $row['birth_date'];
 
@@ -76,7 +76,7 @@
             } else {
               $order = "th";
             }
-            echo "<li>$first $last, will have a birthday on: $monthName $day$order</li> ";
+            echo "<li>$first, will have a birthday on: $monthName $day $order</li> ";
             echo "<br/>";
             echo "<hr>";
           }
