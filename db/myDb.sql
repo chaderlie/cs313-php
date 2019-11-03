@@ -38,12 +38,6 @@ CREATE TABLE memories (
     , got_someone_in_trouble    BOOLEAN                       
 );
 
-/*Create a table of all the photos, which are linked to a memory*/
-CREATE TABLE photos (
-    photo_id            SERIAL                  PRIMARY KEY
-    , memory_id           INTEGER                 REFERENCES memories(memory_id)
-); 
-
 /*Create a table of all the family members that are tagged in a memory*/
 CREATE TABLE member_tags (
     tag_id                SERIAL                  PRIMARY KEY
