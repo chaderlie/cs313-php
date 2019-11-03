@@ -37,11 +37,66 @@
     <p>
       Kirk and Katie were married in 1990 in the Los Angeles temple. Just over a year later, their
       first child was born! Six others followed to come to a total of two boys and five girls. Three of
-      those children are now married. The second oldest Haderlie child, Dayla, and her husband, Peter, have their own child now, making Kirk and Katie
+      those children are now married. The second oldest, Dayla, and her husband, Peter, have their own child now, making Kirk and Katie
       grandparents. The oldest Haderlie child, Lance, and his wife, Nicole, are expecting their first baby
-      to arrive in mid-February. </p>
+      to arrive in mid-February. Alex and Claire have yet to make any grand announcements, but we will see how
+      that goes in the next year or so.</p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Birthdays!</h3>
+      The following family members have birthdays in the next few months:
+      <p>
+        <ul>
+          <?php
+          $month = date('m');
+          $next_month = ($month + 1) % 12;
+          $month_after = ($month + 2) % 12;
+
+          foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month
+            FROM family_members WHERE (birth_month = $month OR birth_month = $next_month OR birth_month = $month_after) 
+            ORDER BY birth_month ASC,
+                      birth_date ASC);") as $row) {
+            $first = $row['first_name'];
+            $last = $row['last_name'];
+            $month = $row['birth_month'];
+            $day = $row['birth_date'];
+
+            $dateObj   = DateTime::createFromFormat('!m', $month);
+            $monthName = $dateObj->format('F');
+
+            $order = "";
+            if ($day == 1) {
+              $order = "st";
+            } else if ($day == 2) {
+              $order = "nd";
+            } else if ($day == 3) {
+              $order = "rd";
+            } else {
+              $order = "th";
+            }
+            echo "<li>$first $last, will have a birthday on: $monthName $day$order</li> ";
+            echo "<br/>";
+            echo "<hr>";
+          }
+          ?>
+        </ul>
+        <h4 style="font-family:'Yu Gothic'; text-transform: uppercase;">The following family members
+          have created an account on this website</h4>
+
+        <ul>
+          <?php
+          foreach ($db->query('SELECT first_name,
+                last_name 
+            FROM site_users su, family_members fm
+            WHERE su.member_id = fm.member_id;') as $row) {
+            $first = $row['first_name'];
+            $last = $row['last_name'];
+            echo "<li>$first $last</li> ";
+            echo "<br/>";
+          }
+          ?>
+        </ul>
+      </p>
+
     </p>
     <div style="text-align: center; font-family: Arial; font-size: 18px;">
       <a href="family_tree.php" class="buttonlike">Family Tree</a>
