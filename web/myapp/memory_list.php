@@ -35,17 +35,19 @@ $db = get_db();
 
         <p>
             <?php
-            foreach ($db->query('SELECT memory_id, title, memory_content, memory_date 
-            FROM memories;') as $row) {
+            foreach ($db->query('SELECT fm.first_name, m.memory_id, m.title, m.memory_content, m.memory_date 
+            FROM memories m, family_members fm WHERE fm.member_id = m.owner_id;') as $row) {
                 $memory_id = $row['memory_id'];
 
                 $title = $row['title'];
+                $author = $row['first_name'];
                 $memory_content = $row['memory_content'];
                 $date = $row['memory_date'];
                 $content = $row['content'];
 
                 echo "<h3>$title</h3> ";
-                echo "<p><b>$date</b></p>";
+                echo "As remembered by $author";
+                echo "<p>Occurred on (or around): <b>$date</b></p>";
                 echo "<p>$memory_content</p>";
                 echo "<br/>";
                 echo "Family Members Tagged: ";

@@ -28,7 +28,7 @@ try {
     $statement->bindValue(':memory_date', $_POST['memory_date']);
     $statement->bindValue(':content', $_POST['story_content']);
 
-   / $statement->bindValue(':funny', isset($_POST['funny']));
+   // $statement->bindValue(':funny', isset($_POST['funny']));
     //$statement->bindValue(':spiritual', isset($_POST['spiritual']));
     //$statement->bindValue(':heartwarming', isset($_POST['heartwarming']));
     //$statement->bindValue(':scary', isset($_POST['scary']));
