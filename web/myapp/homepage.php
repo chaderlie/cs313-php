@@ -62,7 +62,7 @@
           //$statement->bindValue(':this_month', $this_month);
           //$statement->bindValue(':next_month', $next_month);
 
-          foreach ($db - execute() as $row) {
+          foreach ($db->execute() as $row) {
             echo "IN THE LOOP";
             $first = $row['first_name'];
             $last = $row['last_name'];
