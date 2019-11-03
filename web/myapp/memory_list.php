@@ -65,6 +65,8 @@ $db = get_db();
 
                 }
                 echo "</ul>";
+                echo "<hr>";
+
             }
             ?>
         </p>
