@@ -50,6 +50,9 @@
           $month = date('m');
           $next_month = ($month + 1) % 12;
           $month_after = ($month + 2) % 12;
+          if ($next_month == 0)
+            $next_month = 12;
+
 
           foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month
             FROM family_members WHERE (birth_month = $month OR birth_month = $next_month OR birth_month = $month_after) 
