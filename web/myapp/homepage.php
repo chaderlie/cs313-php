@@ -55,9 +55,14 @@
           echo "<br/>";
           echo $next_month;
           echo "<br/>";
-   
 
-          foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = $month OR birth_month = $next_month) ORDER BY birth_month ASC, birth_date ASC;") as $row) {
+          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :month OR birth_month = :next_month) ORDER BY birth_month ASC, birth_date ASC;';
+
+          $statement = $db->prepare($query);
+          $statement->bindValue(':month', $month);
+          $statement->bindValue(':next_month', $next_month);
+
+          foreach ($db-execute as $row) {
             $first = $row['first_name'];
             $last = $row['last_name'];
             $birth_month = $row['birth_month'];
