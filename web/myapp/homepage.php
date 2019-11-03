@@ -56,7 +56,7 @@
           echo $next_month;
           echo "<br/>";
 
-          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :month OR birth_month = :next_month) ORDER BY birth_month ASC, birth_date ASC;';
+          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :month OR birth_month = :next_month);';
 
           $statement = $db->prepare($query);
           $statement->bindValue(':month', $month);
