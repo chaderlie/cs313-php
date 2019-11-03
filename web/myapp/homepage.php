@@ -70,7 +70,9 @@
 
             $dateObj   = DateTime::createFromFormat('!m', $birth_month);
             $monthName = $dateObj->format('F');
-
+            echo $first;
+            echo $last;
+            echo $birth_month;
             $order = "";
             if ($day == 1) {
               $order = "st";
