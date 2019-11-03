@@ -77,7 +77,7 @@ $db = get_db();
             } else {
               $order = "th";
             }
-            echo "<li>$first $last, has a birthday on: $monthName $day$order</li> ";
+            echo "<li>$first, has a birthday on: $monthName $day$order</li> ";
             echo "<br/>";
             echo "<hr>";
           }

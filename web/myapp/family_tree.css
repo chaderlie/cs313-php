@@ -81,3 +81,7 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+hr {
+    background-color: #006e90; 
+}
