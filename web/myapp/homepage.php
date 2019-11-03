@@ -46,20 +46,21 @@ $db = get_db();
       to arrive in mid-February. Alex and Claire have yet to make any grand announcements, but we will see how
       that goes in the next year or so.</p>
     <p>
-      <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Birthdays!</h3>
+      <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Upcoming Birthdays!</h3>
       The following family members have birthdays in the next few months:
       <p>
         <ul>
           <?php
           $month = date('m');
+          $day = date('d');
+
           $next_month = ($month + 1) % 12;
           if ($next_month == 0)
             $next_month = 12;
         
-          foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month
-            FROM family_members WHERE (birth_month = $month OR birth_month = $next_month) 
-            ORDER BY birth_month ASC,
-                      birth_date ASC;") as $row) {
+          foreach ($db->query("SELECT first_name, last_name, birth_date
+            FROM family_members WHERE (birth_month = $month AND birth_date >= $day) 
+            ORDER BY birth_date ASC;") as $row) {
             $first = $row['first_name'];
             $last = $row['last_name'];
             $birth_month = $row['birth_month'];
@@ -67,9 +68,7 @@ $db = get_db();
 
             $dateObj   = DateTime::createFromFormat('!m', $birth_month);
             $monthName = $dateObj->format('F');
-            echo $first;
-            echo $last;
-            echo $birth_month;
+    
             $order = "";
             if ($day == 1) {
               $order = "st";
@@ -80,7 +79,7 @@ $db = get_db();
             } else {
               $order = "th";
             }
-            echo "<li>$first $last, will have a birthday on: $monthName $day$order</li> ";
+            echo "<li>$first $last, has a birthday on: $monthName $day$order</li> ";
             echo "<br/>";
             echo "<hr>";
           }
