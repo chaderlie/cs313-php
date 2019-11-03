@@ -62,7 +62,7 @@
           foreach ($db->query("SELECT first_name, last_name, birth_date, birth_month
             FROM family_members WHERE (birth_month = $month OR birth_month = $next_month OR birth_month = $month_after) 
             ORDER BY birth_month ASC,
-                      birth_date ASC);") as $row) {
+                      birth_date ASC;") as $row) {
             $first = $row['first_name'];
             $last = $row['last_name'];
             $birth_month = $row['birth_month'];
