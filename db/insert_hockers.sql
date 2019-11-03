@@ -3,6 +3,7 @@ INSERT INTO
     first_name,
     middle_name,
     last_name,
+    birth_month, 
     birth_date,
     is_male
   )
@@ -11,7 +12,8 @@ VALUES
     'Jeffrey',
     'Alexander',
     'Hocker',
-    '1999-03-02',
+    11,
+    29,
     true
   );
 INSERT INTO
@@ -19,7 +21,7 @@ INSERT INTO
     first_name,
     middle_name,
     last_name,
-    birth_date,
+    birth_month, birth_date,
     is_male
   )
 VALUES
@@ -27,7 +29,8 @@ VALUES
     'Claire',
     'Haderlie',
     'Hocker',
-    '2000-02-02',
+    9,
+    15,
     false
   );
 INSERT INTO
@@ -72,3 +75,12 @@ SET
   )
 WHERE
   first_name = 'Jeffrey';
+
+
+  UPDATE family_members
+SET spouse_id = (SELECT member_id FROM family_members WHERE first_name='Claire')
+WHERE first_name='Jeffrey';
+
+UPDATE family_members
+SET spouse_id = (SELECT member_id FROM family_members WHERE first_name='Jeffrey')
+WHERE first_name='Claire';

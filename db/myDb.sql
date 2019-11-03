@@ -1,5 +1,3 @@
-
-
 /*Create the family member table*/
 CREATE TABLE family_members (
     member_id               SERIAL              PRIMARY KEY
@@ -9,7 +7,8 @@ CREATE TABLE family_members (
     , father_id               INTEGER             REFERENCES family_members(member_id)
     , mother_id               INTEGER             REFERENCES family_members(member_id)
     , spouse_id               INTEGER             REFERENCES family_members(member_id)
-    , birth_date              DATE                NOT NULL
+    , birth_month             INTEGER             NOT NULL
+    , birth_date              INTEGER             NOT NULL
     , is_male                 BOOLEAN             NOT NULL
 );
 

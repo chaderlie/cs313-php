@@ -39,14 +39,16 @@ $db = get_db();
         <p>
             <ul>
                 <?php
-                foreach ($db->query('SELECT first_name, last_name, birth_date 
+                foreach ($db->query('SELECT first_name, last_name, birth_month, birth_date 
             FROM family_members WHERE father_id = (SELECT member_id FROM family_members WHERE first_name = \'Kirk\');') as $row) {
                     $first = $row['first_name'];
                     $last = $row['last_name'];
-                    $birth = $row['birth_date'];
-                    $content = $row['content'];
-                    echo "<li>$first $last, born: $birth</li> ";
+                    $month = $row['birth_month'];
+                    $day = $row['birth_date'];
+
+                    echo "<li>$first $last, birthday: $month/$day</li> ";
                     echo "<br/>";
+                    echo "<hr>";
                 }
                 ?>
             </ul>

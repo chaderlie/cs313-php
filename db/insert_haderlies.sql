@@ -3,20 +3,22 @@ INSERT INTO
     first_name,
     middle_name,
     last_name,
+    birth_month, 
     birth_date,
     is_male
   )
 VALUES
-  ('Kirk', 'LaMont', 'Haderlie', '1980-02-02', true);
+  ('Kirk', 'LaMont', 'Haderlie', 09, 02, true);
 INSERT INTO
-  family_members (first_name, last_name, birth_date, is_male)
+  family_members (first_name, last_name, birth_month, birth_date, is_male)
 VALUES
-  ('Kathryn', 'Haderlie', '1983-03-02', false);
+  ('Kathryn', 'Haderlie', 01, 08, false);
 INSERT INTO
   family_members (
     first_name,
     middle_name,
     last_name,
+    birth_month, 
     birth_date,
     is_male
   )
@@ -25,18 +27,19 @@ VALUES
     'Kraig',
     'Daniel',
     'Haderlie',
-    '1980-02-02',
+    12,
+    30,
     true
   );
 INSERT INTO
-  family_members (first_name, last_name, birth_date, is_male)
+  family_members (first_name, last_name, birth_month, birth_date, is_male)
 VALUES
-  ('Sarah', 'Haderlie', '1983-03-02', false);
+  ('Sarah', 'Haderlie', 8, 9, false);
 INSERT INTO
-  family_members (first_name, last_name, birth_date, is_male)
+  family_members (first_name, last_name, birth_month, birth_date, is_male)
 VALUES
-  ('Laura', 'Haderlie', '1983-03-02', false);
+  ('Laura', 'Haderlie', 12, 10, false);
 INSERT INTO
-  family_members (first_name, last_name, birth_date, is_male)
+  family_members (first_name, last_name, birth_month, birth_date, is_male)
 VALUES
-  ('Camille', 'Haderlie', '1983-03-02', false);
+  ('Camille', 'Haderlie', 1, 29, false);
