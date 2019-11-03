@@ -56,11 +56,11 @@
           echo $next_month;
           echo "<br/>";
 
-          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :this_month OR birth_month = :next_month);';
+          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = 11 OR birth_month = 12);';
 
           $statement = $db->prepare($query);
-          $statement->bindValue(':this_month', $this_month);
-          $statement->bindValue(':next_month', $next_month);
+          //$statement->bindValue(':this_month', $this_month);
+          //$statement->bindValue(':next_month', $next_month);
 
           foreach ($db - execute() as $row) {
             echo "IN THE LOOP";
