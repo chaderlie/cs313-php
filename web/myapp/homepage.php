@@ -34,8 +34,7 @@ $db = get_db();
     <h1 style="font-family:'Yu Gothic'; text-transform:uppercase">Welcome to Haderlie et al.</h1>
     <p>
       This website was created for Kirk and Katie Haderlie and all their descendents (and kids-in-law, of course).
-      Still working on the content and style of the thing.
-      Should be working good soon!
+      Come here to share stories, get updates, and see whose birthday is coming up next.
     </p>
     <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Who are Kirk and Katie?</h3>
     <p>
@@ -47,7 +46,7 @@ $db = get_db();
       that goes in the next year or so.</p>
     <p>
       <h3 style="font-family:'Yu Gothic'; text-transform: uppercase;">Upcoming Birthdays!</h3>
-      The following family members have birthdays in the next few months:
+      The following family members have birthdays this month or next:
       <p>
         <ul>
           <?php
@@ -57,18 +56,17 @@ $db = get_db();
           $next_month = ($month + 1) % 12;
           if ($next_month == 0)
             $next_month = 12;
-        
-          foreach ($db->query("SELECT first_name, last_name, birth_date
+
+          foreach ($db->query("SELECT first_name, birth_date, birth_month
             FROM family_members WHERE (birth_month = $month OR birth_month = $next_month) 
-            ORDER BY birth_month ASC, birth_date ASC;") as $row) {
+            ORDER BY birth_month ASC;") as $row) {
             $first = $row['first_name'];
-            $last = $row['last_name'];
             $birth_month = $row['birth_month'];
             $day = $row['birth_date'];
 
             $dateObj   = DateTime::createFromFormat('!m', $birth_month);
             $monthName = $dateObj->format('F');
-    
+
             $order = "";
             if ($day == 1) {
               $order = "st";
