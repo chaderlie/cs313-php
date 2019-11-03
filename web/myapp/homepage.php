@@ -47,19 +47,19 @@
       <p>
         <ul>
           <?php
-          $month = date('m');
-          $next_month = ($month + 1) % 12;
+          $this_month = date('m');
+          $next_month = ($this_month + 1) % 12;
           if ($next_month == 0)
             $next_month = 12;
-          echo $month;
+          echo $this_month;
           echo "<br/>";
           echo $next_month;
           echo "<br/>";
 
-          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :month OR birth_month = :next_month);';
+          $query = 'SELECT first_name, last_name, birth_date, birth_month FROM family_members WHERE (birth_month = :this_month OR birth_month = :next_month);';
 
           $statement = $db->prepare($query);
-          $statement->bindValue(':month', $month);
+          $statement->bindValue(':this_month', $this_month);
           $statement->bindValue(':next_month', $next_month);
 
           foreach ($db-execute as $row) {
